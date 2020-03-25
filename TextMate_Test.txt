@@ -1,0 +1,8 @@
+/*Modify your previous query to retrieve the product number, name, and list price of products with product number beginning with 'BK-' followed by any character other than 'R', and ending with a '-' followed by any two numerals.*/
+
+-- select the ProductNumber, Name, and ListPrice columns
+SELECT ProductNumber, Name, ListPrice
+FROM SalesLT.Product
+-- filter for ProductNumbers
+WHERE ProductNumber LIKE 'BK-[^R]%[0-9][0-9]%';
+
